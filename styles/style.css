@@ -1,0 +1,99 @@
+nav {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo h1 link";
+  padding: 10px;
+  grid-area: h;
+  background-color: #cddfe9;
+}
+nav .logonav {
+  width: 7vw;
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .titulo_nav {
+  color: #2d5380;
+  grid-area: h1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .links_nav {
+  grid-area: link;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+nav a {
+  text-decoration: none;
+  color: #2d5380;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #cddfe9;
+  grid-area: f;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "lg copy cp rs";
+}
+footer .cp {
+  grid-area: cp;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer .copy {
+  grid-area: copy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer .rs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  grid-area: rs;
+  gap: 10px;
+  list-style-type: none;
+}
+footer img#logodlmfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: lg;
+  width: 7vw;
+}
+footer .rs_img {
+  width: 7vw;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "h" "m" "f";
+  min-height: 100vh;
+  grid-area: m;
+}
+
+/*# sourceMappingURL=style.css.map */

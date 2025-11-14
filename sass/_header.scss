@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+nav{
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "logo h1 link";
+  padding: 10px;
+  grid-area: h;
+  background-color: v.$bg-color;
+  
+  .logonav{
+    width: 7vw;
+    grid-area: logo;
+    @include v.display (flex, center, center);
+  }
+  .titulo_nav{
+    color: v.$color-principal;
+    grid-area: h1;
+    @include v.display (flex, center, center);
+  }
+  .links_nav{
+    grid-area: link;
+    list-style: none;
+    @include v.display (flex, center, center);
+    flex-direction: column;
+  }a{
+    text-decoration: none;
+    color: v.$color-principal;
+  }a:hover{
+    text-decoration: underline;
+  }
+}
+
+

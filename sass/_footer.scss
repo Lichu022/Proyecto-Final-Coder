@@ -1,0 +1,37 @@
+@use "variables" as v;
+
+footer{
+  @include v.display (grid, center, center);
+  padding: 10px;
+  background-color: v.$bg-color;
+  grid-area:f;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "lg copy cp rs";
+  .cp{
+    grid-area: cp;
+    @include v.display (flex, center, center);
+    text-align: center;
+  }  
+  .copy{
+    grid-area: copy;
+    @include v.display (flex, center, center);
+    text-align: center;
+  }
+  .rs{
+    @include v.display (flex, center, center);
+    flex-direction: row;
+    grid-area: rs;
+    gap: 10px;
+    list-style-type: none;
+  }
+  img#logodlmfooter{
+    @include v.display (flex, center, center);
+    grid-area: lg;
+    width: 7vw;
+  }
+  .rs_img{
+    width: 7vw;
+  }
+}

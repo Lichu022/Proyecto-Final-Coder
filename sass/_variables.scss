@@ -1,0 +1,8 @@
+$color-principal: #2d5380;
+$color-secundario: #037a40;
+$bg-color: #cddfe9;
+@mixin display ($display, $allign, $justify,){
+  display: $display;
+  align-items: $allign;
+  justify-content: $justify;
+}
