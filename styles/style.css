@@ -13,10 +13,9 @@
 }
 
 nav {
-  display: grid;
-  grid-template-columns: repeat(3 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: "logo h1 link";
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   padding: 10px;
   grid-area: h;
   background-color: #cddfe9;
@@ -24,24 +23,13 @@ nav {
 nav .logonav {
   width: 7vw;
   grid-area: logo;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 nav .titulo_nav {
   color: #2d5380;
   grid-area: h1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-nav .dropdown {
+nav .links {
   grid-area: link;
-}
-nav .button_dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 nav a {
   text-decoration: none;
@@ -50,24 +38,26 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+nav .ul-offcanvas {
+  list-style: none;
+}
+nav .boton-ofcanvas {
+  width: 2.5vw;
+}
 
 footer {
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 10px;
-  background-color: #cddfe9;
   grid-area: f;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
   grid-template-areas: "lg copy cp rs";
+  background-color: #cddfe9;
 }
 footer .cp {
   grid-area: cp;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+  font-size: 2vw;
 }
 footer .copy {
   grid-area: copy;
@@ -75,6 +65,7 @@ footer .copy {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 2vw;
 }
 footer .rs {
   display: flex;
@@ -90,10 +81,10 @@ footer img#logodlmfooter {
   align-items: center;
   justify-content: center;
   grid-area: lg;
-  width: 7vw;
+  width: 4vw;
 }
 footer .rs_img {
-  width: 7vw;
+  width: 3vw;
 }
 
 * {

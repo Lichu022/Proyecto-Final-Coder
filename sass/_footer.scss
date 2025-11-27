@@ -1,37 +1,36 @@
 @use "variables" as v;
 
 footer{
-  @include v.display (grid, center, center);
-  padding: 10px;
-  background-color: v.$bg-color;
+  @include v.display (grid, center, space-around);
+  padding: 10px;  
   grid-area:f;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
   grid-template-areas: 
   "lg copy cp rs";
+  background-color: v.$bg-color;
   .cp{
-    grid-area: cp;
-    @include v.display (flex, center, center);
+    grid-area: cp; 
     text-align: center;
+    font-size: 2vw;
   }  
   .copy{
     grid-area: copy;
     @include v.display (flex, center, center);
     text-align: center;
+    font-size: 2vw;
   }
   .rs{
     @include v.display (flex, center, center);
     flex-direction: row;
     grid-area: rs;
-    gap: 10px;
-    list-style-type: none;
+    gap: 10px;;
+    list-style-type: none; 
   }
   img#logodlmfooter{
     @include v.display (flex, center, center);
     grid-area: lg;
-    width: 7vw;
+    width: 4vw;
   }
   .rs_img{
-    width: 7vw;
+    width: 3vw;
   }
 }

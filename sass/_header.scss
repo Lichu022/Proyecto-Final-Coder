@@ -1,11 +1,7 @@
 @use "variables" as v;
 
 nav{
-  display: grid;
-  grid-template-columns: repeat(3 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-  "logo h1 link";
+  @include v.display (flex, center, space-around);
   padding: 10px;
   grid-area: h;
   background-color: v.$bg-color;
@@ -13,12 +9,11 @@ nav{
   .logonav{
     width: 7vw;
     grid-area: logo;
-    @include v.display (flex, center, center);
   }
   .titulo_nav{
     color: v.$color-principal;
     grid-area: h1;
-    @include v.display (flex, center, center);
+  
   }
   .links{
     grid-area: link;
@@ -31,6 +26,10 @@ nav{
   }
   .ul-offcanvas{
     list-style: none;
+  }
+  .boton-ofcanvas{
+    width: 2.5vw;
+
   }
 }
 
